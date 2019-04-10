@@ -1,0 +1,31 @@
+{
+  "name": "generate-release-notes",
+  "version": "1.0.0",
+  "description": "Generate Release Notes",
+  "author": "Anton Kondratyev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonkondratyev/azdev-generate-release-notes"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.7",
+    "@types/q": "^1.5.0",
+    "del": "^3.0.0",
+    "fs-extra": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-install": "^1.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "mocha": "^5.2.0",
+    "node-uuid": "^1.4.8",
+    "semver": "^5.5.0",
+    "shelljs": "^0.8.2",
+    "tfx-cli": "^0.5.14",
+    "typescript": "^3.0.1"
+  }
+}

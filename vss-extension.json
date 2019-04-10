@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "id": "generate-release-notes",
+  "name": "Generate Release Notes",
+  "version": "1.0.0",
+  "publisher": "kondratyevanton",
+  "public": true,
+  "description": "Generate Release Notes",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "scopes": [
+    "vso.build",
+    "vso.release"
+  ],
+  "contributions": [
+    {
+      "id": "generate-release-notes",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "tasks/generate-release-notes"
+      }
+    }
+  ],
+  "contributionTypes": [],
+  "files": [
+    {
+      "path": "tasks/generate-release-notes/"
+    }
+  ]
+}

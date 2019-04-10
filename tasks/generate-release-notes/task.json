@@ -1,0 +1,91 @@
+{
+  "id": "f8826f09-1de0-4fd4-af53-8b8a73c44b4a",
+  "name": "GenerateReleaseNotes",
+  "friendlyName": "Generate Release Notes",
+  "description": "Generate Release Notes",
+  "author": "Anton Kondratyev",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "helpMarkDown": "",
+  "icons": {
+    "default": "icon.png"
+  },
+  "demands": [],
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Generate Release Notes",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced Options",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "filePath",
+      "type": "filePath",
+      "label": "File Path",
+      "required": true,
+      "defaultValue": "$(System.DefaultWorkingDirectory)/ReleaseNotes.txt",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "authType",
+      "type": "pickList",
+      "label": "Authentication",
+      "required": true,
+      "defaultValue": "vssToken",
+      "options": {
+        "vssToken": "VSS",
+        "oAuth": "OAuth",
+        "serviceEndpoint": "Endpoint",
+        "basic": "Basic"
+      },
+      "groupName": "advanced",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "connectedServiceName",
+      "type": "connectedService:Generic",
+      "label": "Service Endpoint",
+      "required": true,
+      "defaultValue": "",
+      "visibleRule": "authType = serviceEndpoint",
+      "groupName": "advanced",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "Username",
+      "required": true,
+      "defaultValue": "",
+      "visibleRule": "authType = basic",
+      "groupName": "advanced",
+      "helpMarkDown": ""
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "Password",
+      "required": true,
+      "defaultValue": "",
+      "visibleRule": "authType = basic",
+      "groupName": "advanced",
+      "helpMarkDown": ""
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "index.js",
+      "argumentFormat": ""
+    }
+  }
+}
